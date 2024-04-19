@@ -25,6 +25,29 @@
         
         
           </style>
+          <style>
+            #myBox{
+            background-color: gray;
+            width: 300px;
+            height: 300px;
+            font-size: 4.1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            border-radius: 50%;
+            animation: rotate 5s linear delay 4s forwards;}
+    
+            @keyframes rotate {
+                from{
+                    transform:rotate(0deg);
+                }
+                to{
+                    transform:rotate(360deg)
+                }
+            }
+        
+        </style>
   </head>
   <body>
     <h2>welcome its betel</h2>
@@ -79,7 +102,35 @@
         Hey there it's me saron...!!!!
       </h1>
     </div>
-    
+    <div id="myBox">
+      Hey there i'm saron!😀
+  </div>
+
+  
+<script>
+  const myBox = document.getElementById("myBox");
+
+myBox.addEventListener("click", event => {
+event.target.style.backgroundColor = "blue";
+event.target.textContent = "Wellcom 😎";
+});
+
+myBox.addEventListener("mouseover", event => {
+event.target.style.backgroundColor = "yellow";
+event.target.textContent = "Wait me 😲";
+});
+
+myBox.addEventListener("mouseout", event => {
+event.target.style.backgroundColor = "lightgreen";
+event.target.textContent = "Click Me 😀";
+});
+
+document.addEventListener("keydown", event => {
+myBox.textContent = "dear bests😍";
+myBox.style.backgroundColor = "aqua";
+});
+
+</script>
     <div
     style="
     margin-top: 50px;
